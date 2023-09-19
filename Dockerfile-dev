@@ -1,4 +1,4 @@
-FROM openjdk:11-slim-buster
+FROM amazoncorretto:11-alpine
 
 WORKDIR /app
 
