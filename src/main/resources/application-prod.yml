@@ -1,10 +1,10 @@
 spring:
   config:
     activate:
-      on-profile: dev
+      on-profile: prod
   cloud:
     config:
-      label: develop
+      label: main
   rabbitmq:
     host: rabbitmq-service
     port: 5672
