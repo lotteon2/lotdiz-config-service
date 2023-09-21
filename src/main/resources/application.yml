@@ -3,7 +3,7 @@ server:
 spring:
   config:
     activate:
-      on-profile: local,dev
+      on-profile: local,dev,prod
   application:
     name: config-service
   cloud:
