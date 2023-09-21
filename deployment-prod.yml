@@ -34,7 +34,7 @@ spec:
           # Health Check
           readinessProbe:
             # 최초 health check전 지연시간
-            initialDelaySeconds: 10
+            initialDelaySeconds: 180
             # health check 간격 주기
             periodSeconds: 30
             # 성공 인정 횟수
