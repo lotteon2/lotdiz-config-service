@@ -40,7 +40,7 @@ spec:
             # 성공 인정 횟수
             successThreshold: 3
             httpGet:
-              port: 8080
+              port: 8888
               path: /actuator/health
       restartPolicy: Always
 
