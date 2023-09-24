@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
         - name: config-deployment
-          image: akak640/lotdiz-config-service:${IMAGE_TAG}
+          image: ${ECR_REGISTRY}/${AWS_ECR_REPOSITORY}:${IMAGE_TAG}
           imagePullPolicy: IfNotPresent
           # Health Check
           readinessProbe:
