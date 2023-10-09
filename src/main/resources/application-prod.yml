@@ -4,7 +4,9 @@ spring:
       on-profile: prod
   cloud:
     config:
-      label: main
+      server:
+        git:
+          default-label: main
   rabbitmq:
     host: rabbitmq-service
     port: 5672

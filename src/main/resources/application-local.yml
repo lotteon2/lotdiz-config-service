@@ -4,7 +4,9 @@ spring:
       on-profile: local
   cloud:
     config:
-      label: develop
+      server:
+        git:
+          default-label: develop
   rabbitmq:
     host: 127.0.0.1
     port: 5672
