@@ -2,16 +2,13 @@ spring:
   config:
     activate:
       on-profile: dev
-  cloud:
-    config:
-      label: develop
   rabbitmq:
     host: rabbitmq-service
     port: 5672
     username: guest
     password: guest
 encrypt:
-  key: secretkey
+  key: ${ENCRYPT_SECRET_KEY}
 eureka:
   client:
     register-with-eureka: true
