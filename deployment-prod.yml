@@ -31,6 +31,9 @@ spec:
         - name: config-deployment
           image: ${ECR_REGISTRY}/${AWS_ECR_REPOSITORY}:${IMAGE_TAG}
           imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: lotdiz-config
           # Health Check
           readinessProbe:
             # 최초 health check전 지연시간
