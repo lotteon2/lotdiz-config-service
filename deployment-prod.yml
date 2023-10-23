@@ -31,16 +31,16 @@ spec:
         - name: config-deployment
           image: ${ECR_REGISTRY}/${AWS_ECR_REPOSITORY}:${IMAGE_TAG}
           imagePullPolicy: IfNotPresent
-          # Health Check
-          readinessProbe:
-            # 최초 health check전 지연시간
-            initialDelaySeconds: 120
-            # health check 간격 주기
-            periodSeconds: 30
-            # 성공 인정 횟수
-            successThreshold: 3
-            httpGet:
-              port: 8888
-              path: /actuator/health
+#          # Health Check
+#          readinessProbe:
+#            # 최초 health check전 지연시간
+#            initialDelaySeconds: 120
+#            # health check 간격 주기
+#            periodSeconds: 30
+#            # 성공 인정 횟수
+#            successThreshold: 3
+#            httpGet:
+#              port: 8888
+#              path: /actuator/health
       restartPolicy: Always
 
