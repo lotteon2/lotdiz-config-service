@@ -93,6 +93,10 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: ${{ env.ECR_REGISTRY }}/${{ env.AWS_ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}
+      # Setting environment file
+      - name: Setting env files
+        run: echo "${{ secrets.ENV }}" > .env
+        shell: bash
       - name: Update Container image in kubernetes pod
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
