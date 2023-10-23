@@ -7,6 +7,9 @@ export IMAGE_TAG=${IMAGE_TAG}
 # Update AWS EKS user config
 aws eks update-kubeconfig --region ap-northeast-2 --name $AWS_EKS_CLUSTER_NAME
 
+# Set configmap for env
+kubectl create configmap lotdiz-config --from-env-file=.env
+
 # Deploy kubernetes deployment resource
 echo "Apply new kubernetes deployment resources..."
 envsubst < ./deployment-prod.yml | kubectl apply -f -
