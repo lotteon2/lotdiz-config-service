@@ -2,7 +2,7 @@ FROM amazoncorretto:11-alpine
 
 WORKDIR /app
 
-ENV PROFILES=dev
+ENV PROFILES=prod
 
 ARG ORIGINAL_JAR_FILE=./build/libs/config-service-1.0.0.jar
 

@@ -1,9 +1,9 @@
 spring:
   config:
     activate:
-      on-profile: local
+      on-profile: prod
   rabbitmq:
-    host: 127.0.0.1
+    host: rabbitmq-service
     port: 5672
     username: guest
     password: guest
@@ -14,6 +14,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka
+      defaultZone: http://discovery-service:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${server.port}
